@@ -5,7 +5,7 @@ sudo apt-get install blablabla -y
 
 # Build C program with RV-Match `kcc` command,
 # Use `-fissue-report` flag to collect errors to `my_errors.json` file.
-kcc -fissue-report=./my_errors.json main.c -o a.out
+kcc -fissue-report=./my_errors.json lua.c -o a.out
 
 # Run the compiled program and collect run-time errors to `my_errors.json` file, which 
 # will be used next step to generate HTML report.
@@ -17,5 +17,7 @@ rv-html-report ./my_errors.json -o report
 
 # Upload your HTML report to RV-Toolkit website with `rv-upload-report` command. 
 rv-upload-report `pwd`/report
+
+# Added line to force update
 
 # Done.
